@@ -1,11 +1,9 @@
 const webpack = require('webpack');
 
-
 module.exports = function override(config) {
-    const fallback = config.resolve.fallback || { 
-                  "zlib": false,
-       };
-
+    const fallback = config.resolve.fallback || {
+      "zlib": false,
+    };
     Object.assign(fallback, {
         "crypto": require.resolve("crypto-browserify"),
         "stream": require.resolve("stream-browserify"),
@@ -15,8 +13,8 @@ module.exports = function override(config) {
         "os": require.resolve("os-browserify"),
         "url": require.resolve("url"),
         'process/browser': require.resolve('process/browser'),
-        "path": require.resolve("path-browserify"),
-      
+        // "zlib": require.resolve("browserify-zlib"),
+        "path": require.resolve("path-browserify")
     })
     config.resolve.fallback = fallback;
     config.plugins = (config.plugins || []).concat([
@@ -38,9 +36,7 @@ module.exports = function override(config) {
                     include: /node_modules/,
                     type: 'javascript/auto',
                     resolve: {
-                      fullySpecified: false,
-                   
-
+                      fullySpecified: false
                     }
                   },
               ...rule.oneOf

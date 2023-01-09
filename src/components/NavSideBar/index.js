@@ -29,7 +29,7 @@ export default function NavSideBar() {
 
                <main className=' bg-purple-900 py-4 space-y-8 px-4 flex flex-col rounded-full '>
                <Link to="/upload/videos"> <RiVideoAddFill className='text-2xl' />  </Link>
-               <Link to="/learn/communities/server/Encode">   <BsPeople  className='text-2xl'/>  </Link>
+               <Link to="/learn/communities">   <BsPeople  className='text-2xl'/>  </Link>
                <Link to="/messenger/recents"> <BsChatDots  className='text-2xl'/> </Link>
                <Link to="learn/tutors">    <GiTeacher  className='text-2xl' />  </Link>
                </main>

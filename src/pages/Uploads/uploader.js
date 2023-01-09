@@ -5,13 +5,13 @@ import { Player, useAssetMetrics, useCreateAsset } from '@livepeer/react';
 import { useDropzone } from 'react-dropzone';
 // import { bundlr } from '../../bundlrUtil';
 import { providers } from "ethers";
-import { WebBundlr } from "@bundlr-network/client";
+// import { WebBundlr } from "@bundlr-network/client";
 import { collection, setDoc,doc,getDoc,addDoc} from  'firebase/firestore'
 import { db } from '../../firebase';
 import { AccountState,xmtpClientState } from '../../recoil/globalState'
 import { useRecoilState ,useRecoilValue} from 'recoil'
 import toast, { Toaster } from 'react-hot-toast';
-var fileReaderStream = require('filereader-stream')
+// var fileReaderStream = require('filereader-stream')
 
 
 
